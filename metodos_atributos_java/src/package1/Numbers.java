@@ -17,7 +17,7 @@ public class Numbers {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
         System.out.println(dtf.format(LocalDateTime.now()));
 
-        System.out.println("Olá caro usuário!");
+        System.out.println("Olá caro usuário! Verificar Numero Positivo");
         System.out.println("Digite seu nome: ");
         nome = input_user.nextLine();
 

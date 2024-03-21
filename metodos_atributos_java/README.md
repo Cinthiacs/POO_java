@@ -1,5 +1,26 @@
 ## Getting Started
 
+Exercicios: 
+
+1. Escreva um método que mostra se um número é positivo
+ou negativo. Considere o zero positivo.
+
+2. Escreva um método recebe 3 números e informa a média
+aritmética.
+
+3. Escreva um método que recebe três números e retorna o
+maior.
+4. Escreva um método que recebe dois números, a e b, e
+retorna a b.
+
+5. Escreva um método que recebe uma quantidade de
+minutos e retorna o equivalente em horas e minutos.
+Por exemplo: 90 min = 1 hora e 30 minutos.
+
+6. Escreva uma função que retorna o fatorial de número
+informado por parâmetro
+
+
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
 
 ## Folder Structure

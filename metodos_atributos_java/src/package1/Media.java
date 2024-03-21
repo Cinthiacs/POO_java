@@ -17,7 +17,7 @@ public class Media {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
         System.out.println(dtf.format(LocalDateTime.now()));
 
-        System.out.println("Olá caro usuário!");
+        System.out.println("Olá caro usuário! Vamos calcular a media aritimetica");
         System.out.println("Digite seu nome: ");
         nome = input_user.nextLine();
 
@@ -46,7 +46,7 @@ public class Media {
                
         if (num_1 >= 0 && num_2 >= 0 && num_3 >= 0){
             System.out.println(nome + " A média aritimética de " + num_1 + " + "+ num_2 + " + " + num_3);
-            System.out.println(nome + " Resulta em: " + media_aritimetica);
+            System.out.println(" Resulta em: " + media_aritimetica);
         }else{
             System.out.print ("Pressione qualquer tecla para terminar o programa ");
             System.in.read();
