@@ -4,8 +4,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Horas {
-    public static void horas (String[] args)throws Exception{
+public class Fatorial {
+    public static void fatorial (String[] args)throws Exception{
         int min = 0;
         String nome;
 
@@ -14,34 +14,24 @@ public class Horas {
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
         System.out.println(dtf.format(LocalDateTime.now()));
-
-        System.out.println("Olá caro usuário! Vamos converter minutos em horas");
+        
+        System.out.println("Olá caro usuário! Vamos retornar o numero digitado em fatorial");
         System.out.println("Digite seu nome: ");
         nome = input_user.nextLine();
 
         System.out.println(nome +" Digite um número: ");
-        min = input_user.nextInt();
+        int f = input_user.nextInt();       
 
-        
-
-        while (min < 0){
+        while (f < 0){
             System.out.println(nome +" Digite um número inteiro positivo: ");
-            min = input_user.nextInt();
+            f = input_user.nextInt();
         }
 
-        int calcula_min = (Math.round(min / 60));        
-        int int_part = (int) calcula_min;
-        float horas = int_part;
-        double minutos = min % 60;
+        int fat = 1;
+        for (int x = f; x > 0; x--){
+           fat= fat * x; 
         
-
-
-        if (min < 60){
-            System.out.println(nome + " Voce digitou: " + minutos + " minutos");
         }
-        if (min >= 60){
-            System.out.println(nome + " Transformando em horas: " + horas + " hora(s) e " + (minutos) + " minutos");
-        }
-
+        System.out.println("o fatorial de " + f + "!"+"=" + fat);
     }
 }
