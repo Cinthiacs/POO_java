@@ -4,9 +4,10 @@ import package1.Insert;
 
 public class App {
     public static void main(String[] args) throws Exception {
-       // Filmes.cadastro(args);
+       Filmes filme = new Filmes();
+       filme.insert_movies();
+    //    Conn conn = new Conn();
+    //    Insert insert = new Insert();
 
-       Conn conn = new Conn();
-       Insert insert = new Insert();
     }
 }
