@@ -6,7 +6,13 @@ Para executar este projeto, é necessário ter instalado:
 
 Java Development Kit (JDK)
 PostgreSQL
-Além disso, é necessário baixar o driver JDBC do PostgreSQL para permitir a conexão com o banco de dados. O driver pode ser baixado aqui.
+Além disso, é necessário baixar o driver JDBC do PostgreSQL para permitir a conexão com o banco de dados. O driver pode ser baixado aqui:
+```bash
+https://jdbc.postgresql.org/download/
+```
+Neste projeto, estou utilizando a IDE VSCode, então adiciono o driver na opção:
+- Java Projects
+- Referenced Libraries+ (selecionar o local onde o driver foi baixado)
 
 ### Configuração do Banco de Dados
 Antes de executar o aplicativo, é necessário configurar o banco de dados PostgreSQL. Certifique-se de criar um banco de dados chamado locadora e uma tabela chamada filmes com a seguinte estrutura:
