@@ -3,8 +3,13 @@
         "src"
     ],
     "java.project.outputPath": "bin",
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "d:\\Downloads\\postgresql-42.6.2.jar"
-    ]
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "Postgre_lib/postgresql-42.6.2.jar"
+        ],
+        "exclude": [
+            "d:\\Downloads\\postgresql-42.6.2.jar"
+        ]
+    }
 }
