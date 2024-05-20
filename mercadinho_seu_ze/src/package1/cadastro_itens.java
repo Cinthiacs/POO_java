@@ -1,4 +1,7 @@
 package package1;
+import package1.Conn;
+import package1.cadastro_hortifrutis;
+import package1.Horti;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -14,11 +17,9 @@ public class cadastro_itens {
         this.conn = conn;
     }
     public void cadastrar_item(){
-        Scanner in = new Scanner(System.in,"UTF-8");    
 
-        System.out.println("");
-        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
-        Scanner input_user = new Scanner(System.in);
+        
+        Scanner entrada_usu = new Scanner(System.in).useLocale(Locale.US);
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
         System.out.println(dtf.format(LocalDateTime.now()));     
@@ -37,11 +38,11 @@ public class cadastro_itens {
             int opcao;
 
             try {
-                opcao = scanner.nextInt();                
+                opcao = entrada_usu.nextInt();                
                 
             } catch (Exception e) {
                 System.out.println("Opcao invalida! Tente Novamente.");
-                scanner.next();
+                entrada_usu.nextInt();
                 continue;
             }
 
@@ -51,10 +52,11 @@ public class cadastro_itens {
                     return;
 
                 case 1:
-                 
-                    break;
+                cadastro_hortifrutis cadastroHortifrutis = new cadastro_hortifrutis(conn);
+                cadastroHortifrutis.cadastrar_horti();
     
                 case 2:
+                    System.out.println("Ainda Nao Implementei");
     
                     break;
                 
@@ -66,28 +68,4 @@ public class cadastro_itens {
         }
         
     }
-}
-
-
-   
-
-    // private void cadastro_horti(Scanner in){
-
-    //     System.out.println ("Insira nome do produto: ");
-    //     String nome_hort = in.nextLine();
-
-    //     System.out.println ("Insira tipo do produto: legumes ou folhas? ");
-    //     String tipo_hort = in.nextLine();
-
-    //     System.out.println("Digite o preco por kg: ");
-    //     double preco = in.nextDouble();
-
-    //     if(!nome_hort.isEmpty()){
-    //         String sql_nome_hort = "INSERT INTO mercearia (nome_produto) VALUES ('" + nome_hort + "')";
-    //     }       
-
-    //     if (!tipo_hort.isEmpty() && (tipo_hort.equalsIgnoreCase("legumes") || tipo_hort.equalsIgnoreCase("folhas"))){
-    //         String sql_nome_hort = "INSERT INTO mercearia (tipo_) VALUES ('" + tipo_hort + "')";
-    //     }        
-    
-    // }
+}    
