@@ -1,5 +1,5 @@
 --create database armazem;
-select * from produtos;
+-- select * from produtos;
 -- create table Produtos(
 -- 	id serial primary key,
 -- 	nome_produto varchar (100),
@@ -12,94 +12,19 @@ select * from produtos;
 -- 	data_validade_produto varchar(10)
 -- );
 
--- create table hortifrutis(
+-- create table servicos(
 -- 	id serial primary key,
--- 	nome_produto varchar(50),
--- 	tipo varchar(50),
--- 	preco_kg numeric(7,2)
+-- 	nome_servico varchar (100),
+-- 	descricao_servico varchar (100),
+-- 	preco_servico numeric(7,2),
+-- 	codigo_servico varchar (100),
+-- 	categoria_servico varchar (100),
+-- 	disponibilidade_servico varchar(10),
+-- 	duracao_horas varchar(10),
+-- 	requer_agendamento varchar(10)
 -- );
 
--- create table laticinios(
--- 	id serial primary key,
--- 	nome_produto varchar(50),
--- 	tipo varchar(50),
--- 	preco_unidade numeric(7,2),
--- 	preco_kg numeric(7,2)
--- );
 
--- create table carnes(
--- 	id serial primary key,
--- 	nome_produto varchar (50),
--- 	tipo varchar (50),
--- 	preco_kg numeric (7,2)
--- );
-
--- create table padaria(
--- 	id serial primary key,
--- 	nome_produto varchar(50),
--- 	tipo varchar (50),
--- 	preco_kg numeric (7,2),
---  	preco_unidade numeric (7,2)
--- );
-
---  create table bebidas(
---  	id serial primary key,
--- 	nome_produto varchar (50),
--- 	tipo varchar (50),
--- 	preco_unidade numeric (7,2)
---  );
- 
---  create table nao_pereciveis(
---  	id serial primary key,
--- 	nome_produto varchar (50),
--- 	tipo varchar (50),
--- 	preco_unidade numeric(7,2)
---  );
-  
---  create table higiene_pessoal(
---   	id serial primary key,
--- 	nome_produto varchar (50),
--- 	tipo varchar (50),
--- 	preco_unidade numeric(7,2)
---  );
- 
---  create table produtos_limpeza(
---  	id serial primary key,
--- 	nome_produto varchar (50),
--- 	tipo varchar (50),
--- 	preco_unidade numeric(7,2)
---  );
- 
---  create table cadastro_servico_cliente(
---  	id serial primary key,
--- 	nome_cliente varchar (50),
--- 	cpf numeric (20),
--- 	logradouro (100),
--- 	numero numeric(10),
--- 	complemento varchar (20)
--- 	bairro varchar (100),
--- 	cep numeric (12),
--- 	cidade varchar (100),
--- 	estado varchar (5)	
---  );
- 
---  create table pedidos_cliente(
---  	id serial primary key,
--- 	id_cliente int,
--- 	pedido_cliente_hortifruti varchar(200),
--- 	pedido_cliente_laticinios varchar(200),
--- 	pedido_cliente_carnes varchar(200),
--- 	pedido_cliente_padaria varchar(200), 
--- 	pedido_cliente_bebidas varchar(200),
--- 	pedido_cliente_nao_pereciveis varchar(200),
--- 	pedido_higiene_pessoal varchar(200), 
--- 	pedido_prod_limpeza varchar(200),
--- 	pedido_recarga_celular numeric (7,2),
--- 	encomenda_padaria varchar (200),
-	
--- 	foreing key (id_cliente) references cadastro_servico_cliente(id)
---  );
- 
  
 
 

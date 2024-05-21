@@ -2,6 +2,7 @@ import package1.Conn;
 import package1.Produto;
 import package1.Servico;
 import package1.SessaoProdutos;
+import package1.sessaoServicos;
 import package1.Item;
 import java.sql.Connection;
 import java.util.Locale;
@@ -51,8 +52,8 @@ public class App {
                     break;
 
                 case 2:                
-                // Cadastro Servicos
-
+                    sessaoServicos sessaoServicos = new sessaoServicos();
+                    sessaoServicos.cadastrar_servico(conn.getConnection());   
                     break;       
                 
                 default:
@@ -63,32 +64,6 @@ public class App {
         }
         
     }
-
-        // Produto produto = new Produto(  "Arroz", 
-        //                                 "Arroz Branco Tipo 1", 
-        //                                 20.00, 
-        //                                 "P001", 
-        //                                 "Alimentos", 
-        //                                 50, 
-        //                                 "Fornecedor A", 
-        //                                 true, 
-        //                                 "2025-01-01", 
-        //                                 "Marca X");
-        //                                 produto.Detalhes();
-        //                                 produto.Create();
-
-        // System.out.println("OOOPPAAAA");
-
-        // Servico servico = new Servico(  "Lavagem de Carro", 
-        //                                 "Lavagem completa do carro",
-        //                                 100.00, 
-        //                                 "S001", 
-        //                                 "Servicos Automotivos", 
-        //                                 true,
-        //                                 12,
-        //                                 true);
-        // servico.Detalhes();
-        // servico.Create();
-    }
+}
 
 
