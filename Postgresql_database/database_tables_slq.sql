@@ -1,12 +1,15 @@
 --create database armazem;
-
--- select * from laticinios;
-
--- create table Funcionarios(
+select * from produtos;
+-- create table Produtos(
 -- 	id serial primary key,
--- 	nome_funcionario varchar (100),
--- 	cpf varchar (20),
--- 	data_admissao varchar (10)
+-- 	nome_produto varchar (100),
+-- 	descricao_produto varchar (100),
+-- 	preco_produto numeric(7,2),
+-- 	codigo_produto varchar (100),
+-- 	categoria_produto varchar (100),
+-- 	quantidade_estoque numeric (100),
+-- 	disponibilidade_produto varchar(10),
+-- 	data_validade_produto varchar(10)
 -- );
 
 -- create table hortifrutis(
