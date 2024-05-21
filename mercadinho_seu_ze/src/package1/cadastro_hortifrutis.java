@@ -63,25 +63,3 @@ public class cadastro_hortifrutis {
         } 
     }
 }   
-
-
-// private void cadastro_horti(Scanner in){
-
-    //     System.out.println ("Insira nome do produto: ");
-    //     String nome_hort = in.nextLine();
-
-    //     System.out.println ("Insira tipo do produto: legumes ou folhas? ");
-    //     String tipo_hort = in.nextLine();
-
-    //     System.out.println("Digite o preco por kg: ");
-    //     double preco = in.nextDouble();
-
-    //     if(!nome_hort.isEmpty()){
-    //         String sql_nome_hort = "INSERT INTO mercearia (nome_produto) VALUES ('" + nome_hort + "')";
-    //     }       
-
-    //     if (!tipo_hort.isEmpty() && (tipo_hort.equalsIgnoreCase("legumes") || tipo_hort.equalsIgnoreCase("folhas"))){
-    //         String sql_nome_hort = "INSERT INTO mercearia (tipo_) VALUES ('" + tipo_hort + "')";
-    //     }        
-    
-    // }

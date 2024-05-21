@@ -2,6 +2,8 @@ package package1;
 import package1.Conn;
 import package1.cadastro_hortifrutis;
 import package1.Horti;
+import package1.Laticinios;
+import package1.cadastro_laticinios;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -32,8 +34,9 @@ public class cadastro_itens {
 
             System.out.println("Escolha a opcao para cadastro: ");
             System.out.println(" 0 - Para sair do programa");
-            System.out.println(" 1 - Cadastro Hortifrutis");
-            System.out.println(" 2 - Cadastro Carnes");
+            System.out.println(" 1 - Cadastro Funcionarios");
+            System.out.println(" 2 - Cadastro Hortifrutis");
+            System.out.println(" 3 - Cadastro Laticinios");
 
             int opcao;
 
@@ -52,18 +55,25 @@ public class cadastro_itens {
                     return;
 
                 case 1:
-                cadastro_hortifrutis cadastroHortifrutis = new cadastro_hortifrutis(conn);
-                cadastroHortifrutis.cadastrar_horti();
-    
+                    cadastro_funcionarios cadastroFuncionarios = new cadastro_funcionarios(conn);
+                    cadastroFuncionarios.cadastrar_funcionarios();
+                
                 case 2:
-                    System.out.println("Ainda Nao Implementei");
+                    cadastro_hortifrutis cadastroHortifrutis = new cadastro_hortifrutis(conn);
+                    cadastroHortifrutis.cadastrar_horti();
     
                     break;
+
+                case 3:
+                    cadastro_laticinios cadastroLaticinios = new cadastro_laticinios(conn);
+                    cadastroLaticinios.cadastrar_laticinios();    
+                    break;
+                
                 
                 default:
                     System.out.println("Opção inválida! Tente novamente.");
-                    
-                }
+                 
+            }
             
         }
         

@@ -1,11 +1,13 @@
 --create database armazem;
 
-create table Funcionarios(
-	id serial primary key,
-	nome_fucionario varchar (100),
-	cpf numeric (20),
-	data_admissao date
-);
+-- select * from laticinios;
+
+-- create table Funcionarios(
+-- 	id serial primary key,
+-- 	nome_funcionario varchar (100),
+-- 	cpf varchar (20),
+-- 	data_admissao varchar (10)
+-- );
 
 -- create table hortifrutis(
 -- 	id serial primary key,
@@ -18,7 +20,7 @@ create table Funcionarios(
 -- 	id serial primary key,
 -- 	nome_produto varchar(50),
 -- 	tipo varchar(50),
--- 	preco unidade numeric(7,2),
+-- 	preco_unidade numeric(7,2),
 -- 	preco_kg numeric(7,2)
 -- );
 
