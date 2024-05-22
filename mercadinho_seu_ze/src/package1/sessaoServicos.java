@@ -28,6 +28,8 @@ public class sessaoServicos {
             System.out.println(" 2 - Para Imprimir Servicos");
             System.out.println(" 3 - Para Atualizar Servicos");
             System.out.println(" 4 - Para Deletar Servicos");
+            System.out.println(" 5 - Escolher Servicos");
+            System.out.println("6 - Mostrar serviços escolhidos");
 
             int opcao;
             try {
@@ -163,7 +165,7 @@ public class sessaoServicos {
                 case 4:
                     // Implementação para deletar serviços
                     System.out.println("Digite o código do serviço a ser deletado: ");
-                    String codigoDeletar = entrada_usu.nextLine();
+                    int codigoDeletar = entrada_usu.nextInt();
 
                     if (conn != null) {
                         String sql = "DELETE FROM servicos WHERE codigo_servico = '" + codigoDeletar + "'";
@@ -180,6 +182,61 @@ public class sessaoServicos {
                         System.out.println("Erro ao conectar com o banco de dados");
                     }
                     break;
+
+                case 5:                
+                    System.out.println("Digite o código do serviço a ser escolhido: ");
+                    int codigoEscolher = entrada_usu.nextInt();
+
+                    if (conn != null) {
+                        String sql = "SELECT * FROM servicos WHERE codigo_servico = '" + codigoEscolher + "'";
+                        Statement statement = conn.createStatement();
+                        ResultSet resultSet = statement.executeQuery(sql);
+
+                        if (resultSet.next()) {
+                            System.out.println("Nome: " + resultSet.getString("nome_servico"));
+                            System.out.println("Descrição: " + resultSet.getString("descricao_servico"));
+                            System.out.println("Preço: " + resultSet.getDouble("preco_servico"));
+                            System.out.println("Código: " + resultSet.getString("codigo_servico"));
+                            System.out.println("Categoria: " + resultSet.getString("categoria_servico"));
+                            System.out.println("Disponibilidade: " + resultSet.getBoolean("disponibilidade_servico"));
+                            System.out.println("Duração em Horas: " + resultSet.getDouble("duracao_horas"));
+                            System.out.println("Requer Agendamento: " + resultSet.getBoolean("requer_agendamento"));
+                        } else {
+                            System.out.println("Erro: Nenhum serviço encontrado com o código fornecido");
+                        }
+                    } else {
+                        System.out.println("Erro ao conectar com o banco de dados");
+                    }
+                    
+                case 6:
+                    System.out.println("Mostrando serviços escolhidos...");
+                    if (conn != null) {
+                        // Consulta SQL para selecionar os serviços escolhidos pelo usuário
+                        String sql = "SELECT * FROM servicos WHERE escolhido = true";
+                        try {
+                            Statement statement = conn.createStatement();
+                            ResultSet resultSet = statement.executeQuery(sql);
+                
+                            // Exibindo os serviços escolhidos
+                            while (resultSet.next()) {
+                                System.out.println("Nome: " + resultSet.getString("nome_servico"));
+                                System.out.println("Descrição: " + resultSet.getString("descricao_servico"));
+                                System.out.println("Preço: " + resultSet.getDouble("preco_servico"));
+                                System.out.println("Código: " + resultSet.getString("codigo_servico"));
+                                System.out.println("Categoria: " + resultSet.getString("categoria_servico"));
+                                System.out.println("Disponibilidade: " + resultSet.getBoolean("disponibilidade_servico"));
+                                System.out.println("Duração em Horas: " + resultSet.getDouble("duracao_horas"));
+                                System.out.println("Requer Agendamento: " + resultSet.getBoolean("requer_agendamento"));
+                                System.out.println("---------------");
+                            }
+                        } catch (SQLException e) {
+                            System.out.println("Erro ao executar a consulta SQL: " + e.getMessage());
+                        }
+                    } else {
+                        System.out.println("Erro ao conectar com o banco de dados");
+                    }
+                    break;
+                
             }
         }
     }

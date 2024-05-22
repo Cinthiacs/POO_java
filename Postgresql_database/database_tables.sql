@@ -1,4 +1,5 @@
 --create database armazem;
+
 -- select * from produtos;
 -- create table Produtos(
 -- 	id serial primary key,
